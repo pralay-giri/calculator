@@ -29,7 +29,6 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2px;
-    /* box-shadow: 6px 6px 10px rgba(255, 255, 255, 0.5); */
     animation: border_animation 5s infinite alternate;
 }
 
