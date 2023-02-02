@@ -1,14 +1,20 @@
-body{
-    background-image: linear-gradient(45deg, #845ec2, #d65dd0, #ff6fcd, #ff8389, #ffc75f, #f9f871);
+body {
+    background-image: linear-gradient(45deg, #845ec2, #d65dd0, #ff6fcd, #ff8389, #e6b55b, #eaea67);
     background-size: 400%;
     animation: bg-animation 10s infinite alternate;
 }
 
-@keyframes bg-animation{
-    0% {background-position: left;}
-    100% {background-position: right;}
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
 }
-#container{
+
+#container {
     width: 15rem;
     height: inherit;
     position: fixed;
@@ -23,9 +29,15 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2px;
+    animation: border_animation 5s infinite alternate;
 }
 
-.output_screen{
+@keyframes border_animation {
+    0%{box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);}
+    100%{box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);}
+}
+
+.output_screen {
     border: 1px solid gray;
     padding: .5rem;
     text-align: right;
@@ -34,17 +46,17 @@ body{
     border-radius: 5px;
 }
 
-.output_screen > p{
+.output_screen>p {
     margin: 5px;
     width: auto;
     height: 1rem;
 }
 
-button[name="equal"]{
+button[name="equal"] {
     grid-column: 3 / -1;
 }
 
-button{
+button {
     border: 1px solid white;
     font-size: medium;
     cursor: pointer;
@@ -53,6 +65,6 @@ button{
     border-radius: 5px;
 }
 
-button:hover{
+button:hover {
     background-color: rgb(208, 208, 208);
 }
